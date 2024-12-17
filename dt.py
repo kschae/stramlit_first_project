@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset
-file_path = '/mnt/data/age2411.csv'
+file_path = 'age2411.csv'
 df = pd.read_csv(file_path)
 
 # Step 1: Calculate the percentage of the 16-year-old population for each region
