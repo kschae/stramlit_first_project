@@ -2,35 +2,35 @@ import streamlit as st
 
 # MBTI descriptions
 descriptions = {
-    "ISTJ": "You are the dependable organizer! ⛏️ You thrive in structured environments, excel in planning, and are a master at getting things done efficiently. Perfect for roles like project managers or accountants! 💼",
-    "ISFJ": "The nurturing protector 🛏️‍♂️. You are empathetic, supportive, and detail-oriented. A wonderful fit for roles in healthcare, teaching 🏫, or social work! 💕",
-    "INFJ": "Visionary and insightful 🤝🔮. You connect deeply with people, inspire change, and excel in counseling, writing 📝, or leading purposeful projects! 🌈",
-    "INTJ": "Strategic mastermind 🧠. You see the big picture, create innovative solutions, and love problem-solving. Ideal for scientists ⚛️, engineers, or entrepreneurs! 🌟",
-    "ISTP": "The pragmatic craftsman ⚖️. You love hands-on work, enjoy fixing things, and adapt quickly. Great as a mechanic, technician, or detective 🕵️‍♂️! 🛠️",
-    "ISFP": "Creative and adventurous 🌌. You shine in artistic roles, love self-expression, and excel in design 🎨, music 🎵, or photography. 🌟",
-    "INFP": "The idealistic dreamer 💡🧥. You are empathetic and driven by values, excelling in counseling, writing 📚, or activism! 🌿",
-    "INTP": "The analytical thinker 🔬🔍. You are logical, curious, and inventive. Perfect for roles in programming, research, or academia! 🌐",
-    "ESTP": "The energetic doer 🏆🚀. You thrive in action-packed roles, adapt quickly, and excel in sales, sports, or entrepreneurship! 💪🌈",
-    "ESFP": "The life of the party 🎉🍻! You bring joy, excitement, and energy wherever you go. Perfect for performers, teachers 📚, or event coordinators! 📊",
-    "ENFP": "The enthusiastic inspirer 🌟🌈! You love people, creativity, and inspiring change. Amazing in roles like coaching, marketing, or public speaking! 📺",
-    "ENTP": "The curious debater 🔎📢! You enjoy challenges, generating ideas, and debating big questions. Perfect for inventors, consultants, or lawyers! 📚🌐",
-    "ESTJ": "The efficient leader 👥✨. You value organization, rules, and results. A natural manager, executive, or law enforcement officer! 🌟🔒",
-    "ESFJ": "The warm-hearted helper 🫶🌿. You love building relationships and creating harmony. Perfect as a nurse, teacher 🎓, or HR professional! 💖",
-    "ENFJ": "The charismatic mentor 📝🎉. You inspire, motivate, and connect with others. Amazing in leadership, coaching, or public relations! 🌟",
-    "ENTJ": "The bold commander 📈💪. You are confident, decisive, and visionary. A perfect fit for CEOs, strategists, or entrepreneurs! 🌐⚖️",
+    "ISTJ": "당신은 믿음직한 조직자입니다! ⛏️ 체계적인 환경에서 뛰어나며 계획을 잘 세우고 효율적으로 일을 처리합니다. 프로젝트 관리자나 회계사 역할에 완벽합니다! 💼",
+    "ISFJ": "보호자이자 배려심 많은 사람 🛏️‍♂️. 공감 능력이 뛰어나고 세심하며 타인을 지원하는 데 탁월합니다. 의료계, 교육 🏫, 사회복지 분야에서 빛을 발합니다! 💕",
+    "INFJ": "비전을 가진 통찰력 있는 사람 🤝🔮. 사람들과 깊이 연결되며 변화를 이끌어내고 상담, 글쓰기 📝, 혹은 의미 있는 프로젝트에서 뛰어납니다! 🌈",
+    "INTJ": "전략적 사고의 달인 🧠. 큰 그림을 보고 혁신적인 해결책을 만듭니다. 과학자 ⚛️, 엔지니어, 혹은 기업가 역할에 이상적입니다! 🌟",
+    "ISTP": "실용적인 장인 ⚖️. 손으로 하는 일을 좋아하고 문제를 해결하며 빠르게 적응합니다. 정비사, 기술자, 혹은 탐정 🕵️‍♂️ 역할에 잘 맞습니다! 🛠️",
+    "ISFP": "창의적이고 모험적인 사람 🌌. 예술 분야에서 빛을 발하며 자신을 표현하는 데 뛰어납니다. 디자인 🎨, 음악 🎵, 사진 촬영에 잘 어울립니다. 🌟",
+    "INFP": "이상적인 꿈꾸는 사람 💡🧥. 공감 능력이 뛰어나고 가치 중심적으로 움직입니다. 상담, 글쓰기 📚, 혹은 사회운동에서 빛을 발합니다! 🌿",
+    "INTP": "분석적인 사색가 🔬🔍. 논리적이고 호기심이 많으며 창의적입니다. 프로그래밍, 연구, 학계에서 뛰어납니다! 🌐",
+    "ESTP": "에너지 넘치는 실행가 🏆🚀. 활동적인 역할에서 빛을 발하며 빠르게 적응합니다. 영업, 스포츠, 기업가 역할에 탁월합니다! 💪🌈",
+    "ESFP": "파티의 중심 🎉🍻! 즐거움과 에너지를 전파하며 분위기를 띄웁니다. 공연가, 교사 📚, 이벤트 기획자로 잘 어울립니다! 📊",
+    "ENFP": "열정적인 영감 제공자 🌟🌈! 사람들과의 교류를 즐기며 창의적이고 변화를 이끌어냅니다. 코칭, 마케팅, 대중 연설에 적합합니다! 📺",
+    "ENTP": "호기심 많은 논쟁가 🔎📢! 도전을 즐기고 아이디어를 제안하며 질문을 탐구합니다. 발명가, 컨설턴트, 변호사 역할이 잘 맞습니다! 📚🌐",
+    "ESTJ": "효율적인 리더 👥✨. 조직과 규칙, 결과를 중시합니다. 뛰어난 관리자, 임원, 법 집행관 역할에 잘 어울립니다! 🌟🔒",
+    "ESFJ": "따뜻한 마음의 조력자 🫶🌿. 관계를 중시하며 조화를 만드는 데 뛰어납니다. 간호사, 교사 🎓, 인사 전문가 역할에 적합합니다! 💖",
+    "ENFJ": "카리스마 있는 멘토 📝🎉. 사람들을 연결하고 동기를 부여합니다. 리더십, 코칭, 홍보 분야에서 빛을 발합니다! 🌟",
+    "ENTJ": "대담한 지휘관 📈💪. 자신감 있고 결단력 있으며 비전을 제시합니다. CEO, 전략가, 기업가 역할에 이상적입니다! 🌐⚖️",
 }
 
 # Streamlit App
-st.title("🌐 Discover Your MBTI Fit! 🎉")
+st.title("🌐 당신의 MBTI 유형을 알아보세요! 🎉")
 
 # Dropdown for MBTI Selection
 selected_mbti = st.selectbox(
-    "Select your MBTI type to learn more about yourself! 🏆",
+    "당신의 MBTI 유형을 선택하고 자신에 대해 더 알아보세요! 🏆",
     list(descriptions.keys())
 )
 
 # Display the description
 if selected_mbti:
-    st.subheader(f"Your MBTI: {selected_mbti} 💥")
+    st.subheader(f"당신의 MBTI: {selected_mbti} 💥")
     st.write(descriptions[selected_mbti])
     st.balloons()  # For a fun animation!
